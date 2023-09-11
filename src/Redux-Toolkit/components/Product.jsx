@@ -14,7 +14,7 @@ const Product = (props) => {
           onClick={(e) => dispatch(addItem(props))}
           className="btn btn-primary"
         >
-          Add to cart
+          Add To Cart
         </button>
       </div>
     </div>

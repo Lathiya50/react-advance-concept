@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import products from "./products.json";
 import Product from "./Redux-Toolkit/components/Product";
 import Cart from "./Redux-Toolkit/components/Cart";
+import TodoList from "./Redux-Toolkit/components/TodoList";
 const App = () => {
   return (
     <div className="container">
@@ -15,6 +16,7 @@ const App = () => {
             <Product key={index} {...product} />
           ))}
       </div>
+      <TodoList />
     </div>
   );
 };
