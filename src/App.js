@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from "react";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
+import products from "./products.json";
+import Product from "./Redux-Toolkit/components/Product";
+import Cart from "./Redux-Toolkit/components/Cart";
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <h1 className="text-center">This is a Product Page</h1>
+      <Cart />
+      <div className="products">
+        {products &&
+          products.map((product, index) => (
+            <Product key={index} {...product} />
+          ))}
+      </div>
     </div>
   );
-}
+};
 
 export default App;
